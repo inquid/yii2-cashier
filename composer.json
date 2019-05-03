@@ -1,5 +1,5 @@
 {
-    "name": "yii2mod/yii2-cashier",
+    "name": "inquid/yii2-cashier",
     "description": "Yii2 Cashier provides an interface to Stripe's subscription billing services.",
     "type": "yii2-extension",
     "keywords": [
@@ -18,7 +18,7 @@
         "php": ">=7.1",
         "yiisoft/yii2": "~2.0.14",
         "yii2mod/yii2-behaviors": "*",
-        "stripe/stripe-php": "~4.0",
+        "stripe/stripe-php": "~6.34.3",
         "nesbot/carbon": "~1.0",
         "dompdf/dompdf": "^0.8.0"
     },
