@@ -1,15 +1,15 @@
 <?php
 
-namespace yii2mod\cashier;
+namespace inquid\cashier;
 
 use Carbon\Carbon;
 use yii\base\Exception;
-use yii2mod\cashier\models\SubscriptionModel;
+use inquid\cashier\models\SubscriptionModel;
 
 /**
  * Class SubscriptionBuilder
  *
- * @package yii2mod\cashier
+ * @package inquid\cashier
  */
 class SubscriptionBuilder
 {

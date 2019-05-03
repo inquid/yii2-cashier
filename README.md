@@ -8,8 +8,8 @@
 
 This extension is the port of [Laravel's Cashier package](https://laravel.com/docs/5.4/billing)
 
-[![Latest Stable Version](https://poser.pugx.org/yii2mod/yii2-cashier/v/stable)](https://packagist.org/packages/yii2mod/yii2-cashier) [![Total Downloads](https://poser.pugx.org/yii2mod/yii2-cashier/downloads)](https://packagist.org/packages/yii2mod/yii2-cashier) [![License](https://poser.pugx.org/yii2mod/yii2-cashier/license)](https://packagist.org/packages/yii2mod/yii2-cashier)
-[![Build Status](https://travis-ci.org/yii2mod/yii2-cashier.svg?branch=master)](https://travis-ci.org/yii2mod/yii2-cashier)
+[![Latest Stable Version](https://poser.pugx.org/inquid/yii2-cashier/v/stable)](https://packagist.org/packages/yii2mod/yii2-cashier) [![Total Downloads](https://poser.pugx.org/yii2mod/yii2-cashier/downloads)](https://packagist.org/packages/yii2mod/yii2-cashier) [![License](https://poser.pugx.org/yii2mod/yii2-cashier/license)](https://packagist.org/packages/yii2mod/yii2-cashier)
+[![Build Status](https://travis-ci.org/inquid/yii2-cashier.svg?branch=master)](https://travis-ci.org/yii2mod/yii2-cashier)
 
 Installation
 ------------
@@ -19,13 +19,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist yii2mod/yii2-cashier "*"
+php composer.phar require --prefer-dist inquid/yii2-cashier "*"
 ```
 
 or add
 
 ```
-"yii2mod/yii2-cashier": "*"
+"inquid/yii2-cashier": "*"
 ```
 
 to the require section of your `composer.json` file.
@@ -67,14 +67,14 @@ $this->addColumn('users', 'trial_ends_at', $this->timestamp()->null());
 > Also you can apply migration by the following command:
 
 ```php
-php yii migrate --migrationPath=@vendor/yii2mod/yii2-cashier/migrations
+php yii migrate --migrationPath=@vendor/inquid/yii2-cashier/migrations
 ```
 
 **Model Setup**
 
 Next, add the Billable trait to your User model definition:
 ```php
-use yii2mod\cashier\Billable;
+use inquid\cashier\Billable;
 
 class User extends ActiveRecord implements IdentityInterface
 {
@@ -345,7 +345,7 @@ Just add the WebhookController to the ```controllerMap``` in your configuration 
 ```php
 'controllerMap' => [
         //Stripe webhook
-        'webhook' => 'yii2mod\cashier\controllers\WebhookController',
+        'webhook' => 'inquid\cashier\controllers\WebhookController',
     ],
 ```
 

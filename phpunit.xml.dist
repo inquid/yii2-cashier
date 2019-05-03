@@ -6,7 +6,7 @@
 		convertWarningsToExceptions="true"
 		stopOnFailure="false">
 		<testsuites>
-			<testsuite name="Yii2mod Test Suite">
+			<testsuite name="Inquid Test Suite">
 				<directory>./tests</directory>
 			</testsuite>
 		</testsuites>

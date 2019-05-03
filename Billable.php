@@ -1,6 +1,6 @@
 <?php
 
-namespace yii2mod\cashier;
+namespace inquid\cashier;
 
 use Carbon\Carbon;
 use Exception;
@@ -16,12 +16,12 @@ use Stripe\Token;
 use Yii;
 use yii\web\NotFoundHttpException;
 use yii\web\Response;
-use yii2mod\cashier\models\SubscriptionModel;
+use inquid\cashier\models\SubscriptionModel;
 
 /**
  * Class Billable
  *
- * @package yii2mod\cashier
+ * @package inquid\cashier
  */
 trait Billable
 {

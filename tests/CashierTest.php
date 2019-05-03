@@ -1,12 +1,12 @@
 <?php
 
-namespace yii2mod\cashier\tests;
+namespace inquid\cashier\tests;
 
 use Carbon\Carbon;
 use Stripe\Token;
 use Yii;
-use yii2mod\cashier\tests\data\CashierTestControllerStub;
-use yii2mod\cashier\tests\data\User;
+use inquid\cashier\tests\data\CashierTestControllerStub;
+use inquid\cashier\tests\data\User;
 
 class CashierTest extends TestCase
 {
@@ -209,13 +209,13 @@ class CashierTest extends TestCase
 
         // Create Invoice
         $user->createAsStripeCustomer($this->getTestToken());
-        $user->invoiceFor('Yii2mod Cashier', 1000);
+        $user->invoiceFor('Inquid Cashier', 1000);
 
         // Invoice Tests
         $invoice = $user->invoices()[0];
 
         $this->assertEquals('$10.00', $invoice->total());
-        $this->assertEquals('Yii2mod Cashier', $invoice->invoiceItems()[0]->asStripeInvoiceItem()->description);
+        $this->assertEquals('Inquid Cashier', $invoice->invoiceItems()[0]->asStripeInvoiceItem()->description);
     }
 
     public function testRefunds()
@@ -224,7 +224,7 @@ class CashierTest extends TestCase
 
         // Create Invoice
         $user->createAsStripeCustomer($this->getTestToken());
-        $invoice = $user->invoiceFor('Yii2mod Cashier', 1000);
+        $invoice = $user->invoiceFor('Inquid Cashier', 1000);
 
         // Create the refund
         $refund = $user->refund($invoice->charge);

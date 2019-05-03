@@ -1,6 +1,6 @@
 <?php
 
-namespace yii2mod\cashier\models;
+namespace inquid\cashier\models;
 
 use Carbon\Carbon;
 use DateTimeInterface;

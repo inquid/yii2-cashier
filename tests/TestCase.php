@@ -1,6 +1,6 @@
 <?php
 
-namespace yii2mod\cashier\tests;
+namespace inquid\cashier\tests;
 
 use Yii;
 use yii\helpers\ArrayHelper;
@@ -37,7 +37,7 @@ class TestCase extends \PHPUnit\Framework\TestCase
             'basePath' => __DIR__,
             'vendorPath' => $this->getVendorPath(),
             'controllerMap' => [
-                'webhook' => 'yii2mod\cashier\controllers\WebhookController',
+                'webhook' => 'inquid\cashier\controllers\WebhookController',
             ],
             'components' => [
                 'db' => [
@@ -49,7 +49,7 @@ class TestCase extends \PHPUnit\Framework\TestCase
                     'scriptUrl' => '/index.php',
                 ],
                 'user' => [
-                    'identityClass' => 'yii2mod\cashier\tests\data\User',
+                    'identityClass' => 'inquid\cashier\tests\data\User',
                 ],
             ],
             'params' => [

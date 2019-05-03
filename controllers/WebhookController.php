@@ -1,6 +1,6 @@
 <?php
 
-namespace yii2mod\cashier\controllers;
+namespace inquid\cashier\controllers;
 
 use Exception;
 use Stripe\Event as StripeEvent;
@@ -9,12 +9,12 @@ use yii\filters\VerbFilter;
 use yii\helpers\Inflector;
 use yii\web\Controller;
 use yii\web\Response;
-use yii2mod\cashier\models\SubscriptionModel;
+use inquid\cashier\models\SubscriptionModel;
 
 /**
  * Class WebhookController
  *
- * @package yii2mod\cashier\controllers
+ * @package inquid\cashier\controllers
  */
 class WebhookController extends Controller
 {
