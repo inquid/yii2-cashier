@@ -21,6 +21,16 @@ jobs:
         with:
           dev: yes
           args: --ignore-platform-reqs
+          
+      - name: Copy .env
+        run: cp .env.example .env
+        
+      - name: Make envfile
+        uses: SpicyPizza/create-envfile@v1
+        with:
+          envkey_STRIPE_SECRET_KEY: ${{ secrets.STRIPE_PUBLIC_KEY }}
+          envkey_STRIPE_PUBLIC_KEY: ${{ secrets.STRIPE_SECRET_KEY }}
+          file_name: .env
 
       - name: Run unit test
         run: |
