@@ -34,6 +34,9 @@ jobs:
           envkey_STRIPE_SECRET_KEY: ${{ secrets.STRIPE_PUBLIC_KEY }}
           envkey_STRIPE_PUBLIC_KEY: ${{ secrets.STRIPE_SECRET_KEY }}
           file_name: .env
+          
+      - name: View .env
+        run: cat .env
 
       - name: Run unit test
         run: |
