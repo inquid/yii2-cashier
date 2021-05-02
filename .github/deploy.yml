@@ -1,0 +1,30 @@
+name: PR integration
+
+on:
+  push:
+    branches:
+      - master
+      - main
+
+jobs:
+  build_image:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Cache Composer dependencies
+        uses: actions/cache@v2.1.4
+        with:
+          path: /tmp/composer-cache
+          key: ${{ runner.os }}-${{ hashFiles('**/composer.lock') }}
+
+      - name: Install dependencies
+        uses: php-actions/composer@v5
+        with:
+          dev: yes
+          args: --ignore-platform-reqs
+
+      - name: Run unit test
+        run: |
+          ./vendor/bin/phpunit tests/
