@@ -54,7 +54,7 @@ class TestCase extends \PHPUnit\Framework\TestCase
             ],
             'params' => [
                 'stripe' => [
-                    'apiKey' => getenv('STRIPE_SECRET'),
+                    'apiKey' => env('STRIPE_SECRET'),
                 ],
             ],
         ], $config));
