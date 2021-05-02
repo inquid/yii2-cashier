@@ -24,8 +24,8 @@
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "~2.0",
-        "phpunit/phpunit": "~7.0"
-        
+        "phpunit/phpunit": "~7.0",
+        "inquid/yii2-dotenv": "dev-master"
     },
     "autoload": {
         "psr-4": {
